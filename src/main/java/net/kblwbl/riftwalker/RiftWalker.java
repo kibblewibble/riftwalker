@@ -11,6 +11,6 @@ public class RiftWalker implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		LOGGER.info("THE RIFTWALKER IS ALIIIVVEEEE!!!!");
 	}
 }
