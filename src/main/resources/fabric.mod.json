@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "riftwalker",
+	"version": "${version}",
+	"name": "Rift Walker",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"kibble_wibble"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/kibblewibble/riftwalker"
+	},
+	"license": "MIT",
+	"icon": "assets/riftwalker/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.kblwbl.riftwalker.RiftWalker"
+		],
+		"client": [
+			"net.kblwbl.riftwalker.RiftWalkerClient"
+		],
+		"fabric-datagen": [
+			"net.kblwbl.riftwalker.RiftWalkerDataGenerator"
+		]
+	},
+	"mixins": [
+		"riftwalker.mixins.json",
+		{
+			"config": "riftwalker.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
