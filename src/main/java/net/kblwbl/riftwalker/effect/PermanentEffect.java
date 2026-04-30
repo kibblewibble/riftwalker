@@ -20,7 +20,7 @@ public class PermanentEffect {
                 if (effect.getEffectType().equals(keepEffect)) {
                     continue;
                 }
-//
+
 //                instance.onStatusEffectRemoved(effect);
                 iterator.remove();
             }
