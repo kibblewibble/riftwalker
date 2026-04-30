@@ -21,7 +21,7 @@ public class PermanentEffect {
                     continue;
                 }
 
-//                instance.onStatusEffectRemoved(effect);
+                instance.onStatusEffectRemoved(effect);
                 iterator.remove();
             }
 
