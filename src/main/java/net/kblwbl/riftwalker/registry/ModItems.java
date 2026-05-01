@@ -1,34 +1,47 @@
 package net.kblwbl.riftwalker.registry;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.kblwbl.riftwalker.RiftWalker;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterials;
+import net.kblwbl.riftwalker.item.RiftRipperItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    //----====((   ITEMS   ))====----\\
-    public static final Item RIFT_RIPPER = registerItem("rift_ripper",
-            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 3, -2.4f))
-            )
-    );
+
+
 
     //----====(( REGISTERS ))====----\\
-    private static Item registerItem(String name, Item item){
-        return Registry.register(Registries.ITEM, Identifier.of(RiftWalker.MOD_ID,  name), item);
+    public static final RegistryKey<ItemGroup> RIFTWALKER_GROUP_KEY = RegistryKey.of(RegistryKeys.ITEM_GROUP, RiftWalker.id("riftwalker_group"));
+    public static final ItemGroup RIFTWALKER_GROUP = FabricItemGroup.builder()
+            .icon(() -> ModItems.RIFT_RIPPER.getDefaultStack())
+            .displayName(Text.translatable("itemGroup.riftwalker"))
+            .build();
+
+    //----====((   ITEMS   ))====----\\
+    public static final Item RIFT_RIPPER = register("rift_ripper",
+            new RiftRipperItem(ToolMaterials.DIAMOND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 3, -2.4f))
+            ));
+
+    public static void init() {
+        Registry.register(Registries.ITEM_GROUP, RIFTWALKER_GROUP_KEY, RIFTWALKER_GROUP);
     }
 
-    public static void registerModItems() {
-        RiftWalker.LOGGER.info("Registering items for " + RiftWalker.MOD_ID + "...");
+    public static Item register(String id, Item item) {
+        return register(RiftWalker.id(id), item);
+    }
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(RIFT_RIPPER);
-        });
+    public static Item register(Identifier id, Item item) {
+        Item returnItem = Registry.register(Registries.ITEM, id, item);
+        ItemGroupEvents.modifyEntriesEvent(RIFTWALKER_GROUP_KEY).register(itemGroup -> itemGroup.add(returnItem.getDefaultStack()));
+        return returnItem;
     }
 }
+

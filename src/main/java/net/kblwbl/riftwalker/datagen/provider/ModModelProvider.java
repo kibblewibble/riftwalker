@@ -1,4 +1,4 @@
-package net.kblwbl.riftwalker.datagen;
+package net.kblwbl.riftwalker.datagen.provider;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;

@@ -2,6 +2,8 @@ package net.kblwbl.riftwalker.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.kblwbl.riftwalker.datagen.provider.ModModelProvider;
+import net.kblwbl.riftwalker.datagen.provider.ModRecipeProvider;
 
 public class RiftWalkerDataGenerator implements DataGeneratorEntrypoint {
     @Override

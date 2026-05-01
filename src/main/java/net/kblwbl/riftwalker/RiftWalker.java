@@ -2,10 +2,8 @@ package net.kblwbl.riftwalker;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.kblwbl.riftwalker.registry.ModDataComponents;
-import net.kblwbl.riftwalker.registry.ModEffects;
-import net.kblwbl.riftwalker.registry.ModItemGroups;
-import net.kblwbl.riftwalker.registry.ModItems;
+import net.kblwbl.riftwalker.registry.*;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,10 +13,16 @@ public class RiftWalker implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ModItemGroups.registerItemGroups();
-        ModItems.registerModItems();
+        ModItems.init();
 
-        ModEffects.registerEffects();
-        ModDataComponents.registerDataComponentTypes();
+        ModEffects.init();
+        ModDataComponents.init();
+        ModSounds.init();
+        ModDamageTypes.init();
+    }
+
+    // riftwalker:path_name
+    public static Identifier id(String name) {
+        return Identifier.of(MOD_ID, name);
     }
 }

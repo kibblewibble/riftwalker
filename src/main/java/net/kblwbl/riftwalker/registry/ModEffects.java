@@ -36,10 +36,8 @@ public class ModEffects {
 
     //----====(( REGISTERS ))====----\\
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
-        return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(RiftWalker.MOD_ID, name), statusEffect);
+        return Registry.registerReference(Registries.STATUS_EFFECT, RiftWalker.id(name), statusEffect);
     }
 
-    public static void registerEffects() {
-        RiftWalker.LOGGER.info("Registering effects for " + RiftWalker.MOD_ID + "...");
-    }
+    public static void init() {}
 }

@@ -21,7 +21,5 @@ public class ModDataComponents {
                 builderOperator.apply(ComponentType.builder()).build());
     }
 
-    public static void registerDataComponentTypes(){
-        RiftWalker.LOGGER.info("Registering Data Components for " + RiftWalker.MOD_ID + "...");
-    }
+    public static void init(){}
 }
