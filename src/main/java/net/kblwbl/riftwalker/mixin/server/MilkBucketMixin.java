@@ -1,4 +1,4 @@
-package net.kblwbl.riftwalker.mixin;
+package net.kblwbl.riftwalker.mixin.server;
 
 import net.kblwbl.riftwalker.registry.ModEffects;
 import net.kblwbl.riftwalker.effect.PermanentEffect;
