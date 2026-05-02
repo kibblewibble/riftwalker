@@ -4,9 +4,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
-public class RiftPlagueEffect extends StatusEffect {
+public class RiftRotEffect extends StatusEffect {
 
-    public RiftPlagueEffect(StatusEffectCategory category, int color) {
+    public RiftRotEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
 

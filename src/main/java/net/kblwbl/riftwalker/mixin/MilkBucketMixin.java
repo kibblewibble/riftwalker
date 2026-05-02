@@ -13,8 +13,8 @@ public abstract class MilkBucketMixin {
     @Redirect(method="finishUsing", at=@At(value="INVOKE", target = "Lnet/minecraft/entity/LivingEntity;" +
             "clearStatusEffects()Z"))
     private boolean bypassMilkBucket(LivingEntity instance) {
-        if(instance.hasStatusEffect(ModEffects.RIFT_PLAGUE)) {
-            return PermanentEffect.keepEffect(instance, ModEffects.RIFT_PLAGUE);
+        if(instance.hasStatusEffect(ModEffects.RIFT_ROT)) {
+            return PermanentEffect.keepEffect(instance, ModEffects.RIFT_ROT);
         }
         return PermanentEffect.keepEffect(instance, ModEffects.RIFT_SICKNESS);
     }

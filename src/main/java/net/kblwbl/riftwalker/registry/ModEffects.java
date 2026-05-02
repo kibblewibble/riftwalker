@@ -1,7 +1,7 @@
 package net.kblwbl.riftwalker.registry;
 
 import net.kblwbl.riftwalker.RiftWalker;
-import net.kblwbl.riftwalker.effect.RiftPlagueEffect;
+import net.kblwbl.riftwalker.effect.RiftRotEffect;
 import net.kblwbl.riftwalker.effect.RiftSicknessEffect;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -27,8 +27,8 @@ public class ModEffects {
                             Identifier.of(RiftWalker.MOD_ID, "rift_sickness"), -0.5,
                             EntityAttributeModifier.Operation.ADD_VALUE));
 
-    public static final RegistryEntry<StatusEffect> RIFT_PLAGUE = registerStatusEffect("rift_plague",
-            new RiftPlagueEffect(StatusEffectCategory.HARMFUL, 0x1c0933)
+    public static final RegistryEntry<StatusEffect> RIFT_ROT = registerStatusEffect("rift_rot",
+            new RiftRotEffect(StatusEffectCategory.HARMFUL, 0x1c0933)
                     .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,
                             Identifier.of(RiftWalker.MOD_ID, "rift_plague"), -2.0,
                             EntityAttributeModifier.Operation.ADD_VALUE));

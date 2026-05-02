@@ -10,7 +10,7 @@ import net.minecraft.registry.RegistryKeys;
 public class ModDamageTypes {
 
     //----====((DAMAGE TYPES))====----\\
-    public static final RegistryKey<DamageType> RIFT_ROT = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, RiftWalker.id("rift_rot"));
+    public static final RegistryKey<DamageType> RIFT_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, RiftWalker.id("rift_damage"));
 
     //----====(( REGISTERS ))====----\\
     public static DamageSource create(LivingEntity entity, RegistryKey<DamageType> key) {

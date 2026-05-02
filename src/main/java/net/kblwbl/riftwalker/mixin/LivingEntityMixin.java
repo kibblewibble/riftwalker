@@ -21,12 +21,12 @@ public abstract class LivingEntityMixin {
 
     @Inject(method="canHaveStatusEffect", at = @At("HEAD"), cancellable = true)
     private void sicknessControl(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> cir){
-        if(this.hasStatusEffect(ModEffects.RIFT_PLAGUE)) {
+        if(this.hasStatusEffect(ModEffects.RIFT_ROT)) {
             cir.setReturnValue(!effect.equals(ModEffects.RIFT_SICKNESS));
         }
         else if(this.hasStatusEffect(ModEffects.RIFT_SICKNESS)) {
             this.removeStatusEffect(ModEffects.RIFT_SICKNESS);
-            cir.setReturnValue(effect.equals(ModEffects.RIFT_PLAGUE));
+            cir.setReturnValue(effect.equals(ModEffects.RIFT_ROT));
         }
     }
 
