@@ -13,9 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-
-
-
+    public static void init() {  Registry.register(Registries.ITEM_GROUP, RIFTWALKER_GROUP_KEY, RIFTWALKER_GROUP);  }
 
     //----====(( REGISTERS ))====----\\
     public static final RegistryKey<ItemGroup> RIFTWALKER_GROUP_KEY = RegistryKey.of(RegistryKeys.ITEM_GROUP, RiftWalker.id("riftwalker_group"));
@@ -30,13 +28,7 @@ public class ModItems {
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 3, -2.4f))
             ));
 
-    public static void init() {
-        Registry.register(Registries.ITEM_GROUP, RIFTWALKER_GROUP_KEY, RIFTWALKER_GROUP);
-    }
-
-    public static Item register(String id, Item item) {
-        return register(RiftWalker.id(id), item);
-    }
+    public static Item register(String id, Item item) {  return register(RiftWalker.id(id), item);  }
 
     public static Item register(Identifier id, Item item) {
         Item returnItem = Registry.register(Registries.ITEM, id, item);

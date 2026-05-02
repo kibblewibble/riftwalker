@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import java.util.function.UnaryOperator;
 
 public class ModDataComponents {
+    public static void init(){}
 
     //----====(( COMPONENTS ))====----\\
     public static final ComponentType<Boolean> PLAGUED =
@@ -20,6 +21,4 @@ public class ModDataComponents {
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(RiftWalker.MOD_ID, name),
                 builderOperator.apply(ComponentType.builder()).build());
     }
-
-    public static void init(){}
 }

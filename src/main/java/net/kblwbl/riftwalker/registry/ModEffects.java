@@ -13,24 +13,25 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 public class ModEffects {
+    public static void init() {}
 
     //----====((  EFFECTS  ))====----\\
     public static final RegistryEntry<StatusEffect> RIFT_SICKNESS = registerStatusEffect("rift_sickness",
             new RiftSicknessEffect(StatusEffectCategory.HARMFUL, 0x311257)
                     .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,
-                            Identifier.of(RiftWalker.MOD_ID, "rift_sickness"), -2.0,
+                            Identifier.of(RiftWalker.MOD_ID, "rift_sickness"), -2.0F,
                             EntityAttributeModifier.Operation.ADD_VALUE)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
                             Identifier.of(RiftWalker.MOD_ID, "rift_sickness"), -0.05F,
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
                     .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
-                            Identifier.of(RiftWalker.MOD_ID, "rift_sickness"), -0.5,
+                            Identifier.of(RiftWalker.MOD_ID, "rift_sickness"), -0.5F,
                             EntityAttributeModifier.Operation.ADD_VALUE));
 
     public static final RegistryEntry<StatusEffect> RIFT_ROT = registerStatusEffect("rift_rot",
             new RiftRotEffect(StatusEffectCategory.HARMFUL, 0x1c0933)
                     .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,
-                            Identifier.of(RiftWalker.MOD_ID, "rift_plague"), -2.0,
+                            Identifier.of(RiftWalker.MOD_ID, "rift_rot"), -2.0F,
                             EntityAttributeModifier.Operation.ADD_VALUE));
 
 
@@ -38,6 +39,4 @@ public class ModEffects {
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, RiftWalker.id(name), statusEffect);
     }
-
-    public static void init() {}
 }

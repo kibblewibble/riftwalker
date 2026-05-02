@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "riftwalker:rift_damage",
+      "required": false
+    }
+  ]
+}

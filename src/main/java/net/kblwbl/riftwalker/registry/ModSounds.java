@@ -7,13 +7,10 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSounds {
-
-
+    public static void init() {}
 
     public static SoundEvent register(String name){
         Identifier id = RiftWalker.id(name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
-
-    public static void init() {}
 }

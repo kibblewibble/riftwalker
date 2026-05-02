@@ -16,17 +16,10 @@ public abstract class LivingEntityMixin {
     @Shadow
     public abstract boolean hasStatusEffect(RegistryEntry<StatusEffect> effect);
 
-    @Shadow
-    public abstract boolean removeStatusEffect(RegistryEntry<StatusEffect> effect);
-
     @Inject(method="canHaveStatusEffect", at = @At("HEAD"), cancellable = true)
     private void sicknessControl(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> cir){
         if(this.hasStatusEffect(ModEffects.RIFT_ROT)) {
             cir.setReturnValue(!effect.equals(ModEffects.RIFT_SICKNESS));
-        }
-        else if(this.hasStatusEffect(ModEffects.RIFT_SICKNESS)) {
-            this.removeStatusEffect(ModEffects.RIFT_SICKNESS);
-            cir.setReturnValue(effect.equals(ModEffects.RIFT_ROT));
         }
     }
 
