@@ -4,19 +4,18 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ExampleMixin",
-    "server.EffectCommandMixin",
     "server.LivingEntityMixin",
     "server.MilkBucketMixin",
     "server.TotemMixin"
+  ],
+  "client": [
+    "client.ItemRendererMixin",
+    "client.ModelLoaderMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "overwrites": {
     "requireAnnotations": true
-  },
-  "client": [
-    "client.ItemRendererMixin",
-    "client.ModelLoaderMixin"
-  ]
+  }
 }

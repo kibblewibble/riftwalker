@@ -9,8 +9,8 @@ import net.kblwbl.riftwalker.RiftWalker;
 public class ModAttachmentTypes {
     public static void init(){}
 
-    public static final AttachmentType<Boolean> PLAGUED = AttachmentRegistry.create(
-            RiftWalker.id("plagued"),
+    public static final AttachmentType<Boolean> ROTTED = AttachmentRegistry.create(
+            RiftWalker.id("rotted"),
             booleanBuilder -> booleanBuilder
                     .initializer(() -> false)
                     .persistent(Codec.BOOL)

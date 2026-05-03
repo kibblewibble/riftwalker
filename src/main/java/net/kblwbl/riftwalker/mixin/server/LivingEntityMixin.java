@@ -22,6 +22,4 @@ public abstract class LivingEntityMixin {
             cir.setReturnValue(!effect.equals(ModEffects.RIFT_SICKNESS));
         }
     }
-
-
 }

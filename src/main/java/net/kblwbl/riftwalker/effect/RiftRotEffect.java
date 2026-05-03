@@ -1,10 +1,12 @@
 package net.kblwbl.riftwalker.effect;
 
+import net.kblwbl.riftwalker.registry.ModAttachmentTypes;
 import net.kblwbl.riftwalker.registry.ModEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
+@SuppressWarnings("UnstableApiUsage")
 public class RiftRotEffect extends StatusEffect {
 
     public RiftRotEffect(StatusEffectCategory category, int color) {
@@ -26,5 +28,6 @@ public class RiftRotEffect extends StatusEffect {
         if(entity.hasStatusEffect(ModEffects.RIFT_SICKNESS)){
             entity.removeStatusEffect(ModEffects.RIFT_SICKNESS);
         }
+        entity.setAttached(ModAttachmentTypes.ROTTED, true);
     }
 }

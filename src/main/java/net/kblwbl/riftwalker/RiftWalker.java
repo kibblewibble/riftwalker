@@ -20,6 +20,8 @@ public class RiftWalker implements ModInitializer {
         ModAttachmentTypes.init();
         ModSounds.init();
         ModDamageTypes.init();
+
+        ModCommands.init();
     }
 
     // riftwalker:path_name
