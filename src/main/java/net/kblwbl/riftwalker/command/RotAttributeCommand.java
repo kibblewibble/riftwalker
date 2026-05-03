@@ -13,6 +13,8 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 
+import java.util.Objects;
+
 import static net.kblwbl.riftwalker.RiftWalker.MOD_ID;
 
 @SuppressWarnings("UnstableApiUsage")
@@ -52,7 +54,7 @@ public class RotAttributeCommand {
             } else {
                 entity.setAttached(ModAttachmentTypes.ROTTED, true);
                 entity.addStatusEffect(new StatusEffectInstance(ModEffects.RIFT_ROT, -1, 0, false, false));
-                context.getSource().sendMessage(Text.literal("Applied Rift Rot Effect & Attribute to " + entity));
+                context.getSource().sendMessage(Text.literal("Applied Rift Rot Effect & Attribute to " + Objects.requireNonNull(entity.getDisplayName()).getString()));
                 return 1;
             }
 
@@ -73,7 +75,7 @@ public class RotAttributeCommand {
         } else {
             entity.setAttached(ModAttachmentTypes.ROTTED, false);
             entity.removeStatusEffect(ModEffects.RIFT_ROT);
-            context.getSource().sendMessage(Text.literal("Removed Rift Rot Effect & Attribute from " + entity));
+            context.getSource().sendMessage(Text.literal("Removed Rift Rot Effect & Attribute from " + Objects.requireNonNull(entity.getDisplayName()).getString()));
             return 1;
         }
         } catch( Exception e ){ context.getSource().sendError(Text.literal( "This is probably the dev's fault, please reach out!!! " + e)); }

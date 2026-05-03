@@ -14,18 +14,19 @@ public class RiftWalker implements ModInitializer {
     @Override
     public void onInitialize() {
         ModItems.init();
-
         ModEffects.init();
+
         ModDataComponents.init();
         ModAttachmentTypes.init();
+
         ModSounds.init();
+
         ModDamageTypes.init();
 
         ModCommands.init();
+        ModRespawn.init();
     }
 
     // riftwalker:path_name
-    public static Identifier id(String name) {
-        return Identifier.of(MOD_ID, name);
-    }
+    public static Identifier id(String name) {return Identifier.of(MOD_ID, name);}
 }
