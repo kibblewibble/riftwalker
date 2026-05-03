@@ -17,6 +17,7 @@ public class RiftWalker implements ModInitializer {
 
         ModEffects.init();
         ModDataComponents.init();
+        ModAttachmentTypes.init();
         ModSounds.init();
         ModDamageTypes.init();
     }

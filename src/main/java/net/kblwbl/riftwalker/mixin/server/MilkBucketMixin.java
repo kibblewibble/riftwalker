@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.*;
 
 @Mixin(MilkBucketItem.class)
 public abstract class MilkBucketMixin {
-    @Redirect(method="finishUsing", at=@At(value="INVOKE", target = "Lnet/minecraft/entity/LivingEntity;" +
+    @Redirect(method="finishUsing", at = @At(value="INVOKE", target = "Lnet/minecraft/entity/LivingEntity;" +
             "clearStatusEffects()Z"))
     private boolean bypassMilkBucket(LivingEntity instance) {
         if(instance.hasStatusEffect(ModEffects.RIFT_ROT)) {

@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LivingEntity.class)
 public abstract class TotemMixin {
-    @Redirect(method="tryUseTotem", at = @At(value="INVOKE", target="Lnet/minecraft/entity/LivingEntity;" +
+    @Redirect(method="tryUseTotem", at = @At(value="INVOKE", target = "Lnet/minecraft/entity/LivingEntity;" +
             "clearStatusEffects()Z"))
     public boolean bypassTotem(LivingEntity instance) {
         return PermanentEffect.keepEffect(instance, ModEffects.RIFT_ROT);
