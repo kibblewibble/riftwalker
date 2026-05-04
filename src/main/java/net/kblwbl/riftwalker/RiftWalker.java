@@ -24,7 +24,7 @@ public class RiftWalker implements ModInitializer {
         ModDamageTypes.init();
 
         ModCommands.init();
-        ModRespawn.init();
+        ModDeaths.init();
     }
 
     // riftwalker:path_name

@@ -1,4 +1,4 @@
-package net.kblwbl.riftwalker.function.respawn;
+package net.kblwbl.riftwalker.function.deaths;
 
 import net.kblwbl.riftwalker.registry.ModAttachmentTypes;
 import net.kblwbl.riftwalker.registry.ModEffects;
@@ -13,3 +13,4 @@ public class AfterRespawn {
         }
     }
 }
+//||Boolean.TRUE.equals(newPlayer.getAttached(ModAttachmentTypes.ROTTED))
