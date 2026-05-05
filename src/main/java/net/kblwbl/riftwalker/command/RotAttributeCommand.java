@@ -17,13 +17,13 @@ import java.util.Objects;
 
 import static net.kblwbl.riftwalker.RiftWalker.MOD_ID;
 
-@SuppressWarnings("UnstableApiUsage")
+@SuppressWarnings({"UnstableApiUsage", "unused"})
 public class RotAttributeCommand {
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess registryAccess, CommandManager.RegistrationEnvironment registrationEnvironment) {
         var root = CommandManager.literal(MOD_ID);
 
-        root.then(CommandManager.literal("rot_attribute")
+        root.then(CommandManager.literal("rotAttribute")
             .requires(source -> source.hasPermissionLevel(2))
                 .then(CommandManager.literal("add")
                     .then(CommandManager.argument("player", EntityArgumentType.player())

@@ -16,4 +16,18 @@ public class ModAttachmentTypes {
                     .persistent(Codec.BOOL)
                     .copyOnDeath()
     );
+
+    public static final AttachmentType<Boolean> REALM_VISIBLE = AttachmentRegistry.create(
+            RiftWalker.id("realm_visible"),
+            booleanBuilder -> booleanBuilder
+                    .initializer(() -> false)
+                    .persistent(Codec.BOOL)
+    );
+
+    public static final AttachmentType<Boolean> REALM_WITHIN = AttachmentRegistry.create(
+            RiftWalker.id("realm_within"),
+            booleanBuilder -> booleanBuilder
+                    .initializer(() -> false)
+                    .persistent(Codec.BOOL)
+    );
 }
