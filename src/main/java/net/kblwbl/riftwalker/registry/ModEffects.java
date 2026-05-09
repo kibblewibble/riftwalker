@@ -33,6 +33,12 @@ public class ModEffects {
                             Identifier.of(RiftWalker.MOD_ID, "rift_rot"), -2.0F,
                             EntityAttributeModifier.Operation.ADD_VALUE));
 
+    public static final RegistryEntry<StatusEffect> HUBRIS = registerStatusEffect("hubris",
+            new RiftRotEffect(StatusEffectCategory.HARMFUL, 0x1c0933)
+                    .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+                            Identifier.of(RiftWalker.MOD_ID, "hubris"), 1.5F,
+                            EntityAttributeModifier.Operation.ADD_VALUE));
+
 
     //----====(( REGISTERS ))====----\\
     public static void init() {}

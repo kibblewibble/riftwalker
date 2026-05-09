@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "riftwalker:rift_rose"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "riftwalker:rift_petal"
+  }
+}
