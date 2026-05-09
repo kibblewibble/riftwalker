@@ -14,6 +14,7 @@ public class RiftWalker implements ModInitializer {
     @Override
     public void onInitialize() {
         ModItems.init();
+        ModBlocks.init();
         ModEffects.init();
 
         ModDataComponents.init();

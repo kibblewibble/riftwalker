@@ -6,6 +6,8 @@ import net.kblwbl.riftwalker.function.deaths.AfterDeath;
 import net.kblwbl.riftwalker.function.deaths.AfterRespawn;
 
 public class ModDeaths {
+
+    //----====(( REGISTERS ))====----\\
     public static void init(){
         ServerPlayerEvents.AFTER_RESPAWN.register(AfterRespawn::applyRotRespawn);
         ServerLivingEntityEvents.AFTER_DEATH.register(AfterDeath::sicknessToRot);

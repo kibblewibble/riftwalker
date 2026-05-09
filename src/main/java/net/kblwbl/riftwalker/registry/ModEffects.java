@@ -13,7 +13,6 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 public class ModEffects {
-    public static void init() {}
 
     //----====((  EFFECTS  ))====----\\
     public static final RegistryEntry<StatusEffect> RIFT_SICKNESS = registerStatusEffect("rift_sickness",
@@ -36,6 +35,8 @@ public class ModEffects {
 
 
     //----====(( REGISTERS ))====----\\
+    public static void init() {}
+
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, RiftWalker.id(name), statusEffect);
     }

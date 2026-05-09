@@ -7,6 +7,9 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSounds {
+
+
+    //----====(( REGISTERS ))====----\\
     public static void init() {}
 
     public static SoundEvent register(String name){
