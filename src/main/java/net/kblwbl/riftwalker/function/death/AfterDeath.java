@@ -1,4 +1,4 @@
-package net.kblwbl.riftwalker.function.deaths;
+package net.kblwbl.riftwalker.function.death;
 
 import net.kblwbl.riftwalker.registry.ModAttachmentTypes;
 import net.kblwbl.riftwalker.registry.ModDamageTypes;

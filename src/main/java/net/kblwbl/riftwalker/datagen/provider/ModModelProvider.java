@@ -21,6 +21,9 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RIFT_RIPPER, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.CROWN_OF_HUBRIS, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.RIFT_PETAL, Models.GENERATED);
     }
 }

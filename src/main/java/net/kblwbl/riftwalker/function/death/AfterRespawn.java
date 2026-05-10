@@ -1,11 +1,11 @@
-package net.kblwbl.riftwalker.function.deaths;
+package net.kblwbl.riftwalker.function.death;
 
 import net.kblwbl.riftwalker.registry.ModAttachmentTypes;
 import net.kblwbl.riftwalker.registry.ModEffects;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.server.network.ServerPlayerEntity;
 
-@SuppressWarnings("UnstableApiUsage")
+@SuppressWarnings("UnstableApiUsage, unused")
 public class AfterRespawn {
     public static void applyRotRespawn(ServerPlayerEntity oldPlayer, ServerPlayerEntity newPlayer, boolean alive) {
         if(Boolean.TRUE.equals(oldPlayer.getAttached(ModAttachmentTypes.ROTTED))){

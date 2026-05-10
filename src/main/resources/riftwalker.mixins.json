@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ExampleMixin",
+    "server.PlayerEntityMixin",
     "server.LivingEntityMixin",
     "server.MilkBucketMixin",
     "server.TotemMixin"

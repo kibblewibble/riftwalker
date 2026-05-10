@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "riftwalker:item/crown_of_hubris"
+  }
+}
