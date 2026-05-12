@@ -21,8 +21,9 @@ public abstract class PlayerEntityMixin{
     public void killPlayerCheck(ServerWorld world, LivingEntity other, CallbackInfoReturnable<Boolean> cir){
         //other.isPlayer() &&
         if(this.getInventory().getArmorStack(3).isOf(ModItems.CROWN_OF_HUBRIS)){
-            CrownOfHubrisItem.increaseHubris(this);
+            CrownOfHubrisItem.increaseHubris((PlayerEntity)(Object)this);
             cir.setReturnValue(true);
+            cir.cancel();
         }
     }
 }

@@ -20,6 +20,7 @@ public abstract class LivingEntityMixin {
     private void sicknessControl(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> cir){
         if(this.hasStatusEffect(ModEffects.RIFT_ROT)) {
             cir.setReturnValue(!effect.equals(ModEffects.RIFT_SICKNESS));
+            cir.cancel();
         }
     }
 }

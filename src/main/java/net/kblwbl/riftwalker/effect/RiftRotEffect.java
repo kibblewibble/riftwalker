@@ -24,10 +24,12 @@ public class RiftRotEffect extends StatusEffect {
     }
 
     @Override
-    public void onApplied(LivingEntity entity, int amplifier){
-        if(entity.hasStatusEffect(ModEffects.RIFT_SICKNESS)){
-            entity.removeStatusEffect(ModEffects.RIFT_SICKNESS);
+    public void onApplied(LivingEntity entity, int amplifier) {
+        if(entity.hasStatusEffect(ModEffects.RIFT_ROT)) {
+            if (entity.hasStatusEffect(ModEffects.RIFT_SICKNESS)) {
+                entity.removeStatusEffect(ModEffects.RIFT_SICKNESS);
+            }
+            entity.setAttached(ModAttachmentTypes.ROTTED, true);
         }
-        entity.setAttached(ModAttachmentTypes.ROTTED, true);
     }
 }

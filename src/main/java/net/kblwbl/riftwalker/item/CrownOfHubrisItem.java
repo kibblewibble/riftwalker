@@ -1,6 +1,6 @@
 package net.kblwbl.riftwalker.item;
 
-import net.kblwbl.riftwalker.function.effect.AmplifyEffect;
+import net.kblwbl.riftwalker.function.effect.ModifyEffectStatus;
 import net.kblwbl.riftwalker.registry.ModEffects;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,11 +13,15 @@ public class CrownOfHubrisItem extends ArmorItem {
         super(material, type, settings);
     }
 
-    public static void increaseHubris(PlayerEntity player){
-        if(!player.hasStatusEffect(ModEffects.HUBRIS)){
-            player.addStatusEffect(new StatusEffectInstance(ModEffects.HUBRIS, 2*60, 0, false, true));
+    public static void increaseHubris(PlayerEntity player) {
+        if (!player.hasStatusEffect(ModEffects.HUBRIS)||!player.hasStatusEffect(ModEffects.RIFT_SICKNESS)) {
+            player.addStatusEffect(new StatusEffectInstance(ModEffects.HUBRIS, 20 * 60, 0, false, true));
+            player.addStatusEffect(new StatusEffectInstance(ModEffects.RIFT_SICKNESS, 20 * 60, 0, false, true));
         } else {
-            AmplifyEffect.increaseAmplifier(player, ModEffects.HUBRIS, 1, 60, false);
+            // Add 60 seconds and 1 level to Hubris and Rift Sickness
+            ModifyEffectStatus.effectModify(player, ModEffects.HUBRIS, 1, 20 * 30, false, false);
+            // Effectively makes Hubris' level the minimum level of Rift Sickness'
+            ModifyEffectStatus.effectModify(player, ModEffects.RIFT_SICKNESS, player.getStatusEffect(ModEffects.HUBRIS).getAmplifier(), 20 * 30, false, false);
         }
     }
 }
