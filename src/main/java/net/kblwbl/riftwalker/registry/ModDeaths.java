@@ -2,8 +2,8 @@ package net.kblwbl.riftwalker.registry;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
-import net.kblwbl.riftwalker.function.death.AfterDeath;
-import net.kblwbl.riftwalker.function.death.AfterRespawn;
+import net.kblwbl.riftwalker.util.death.AfterDeath;
+import net.kblwbl.riftwalker.util.death.AfterRespawn;
 
 public class ModDeaths {
 

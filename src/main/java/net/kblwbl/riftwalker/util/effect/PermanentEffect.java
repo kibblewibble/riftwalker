@@ -1,4 +1,4 @@
-package net.kblwbl.riftwalker.function.effect;
+package net.kblwbl.riftwalker.util.effect;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;

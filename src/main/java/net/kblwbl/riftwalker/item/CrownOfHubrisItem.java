@@ -1,6 +1,6 @@
 package net.kblwbl.riftwalker.item;
 
-import net.kblwbl.riftwalker.function.effect.ModifyEffectStatus;
+import net.kblwbl.riftwalker.util.effect.ModifyEffectStatus;
 import net.kblwbl.riftwalker.registry.ModEffects;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;

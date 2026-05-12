@@ -3,6 +3,7 @@ package net.kblwbl.riftwalker;
 import net.fabricmc.api.ModInitializer;
 
 import net.kblwbl.riftwalker.registry.*;
+import net.kblwbl.riftwalker.util.modify.ModLootTableModifiers;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,7 @@ public class RiftWalker implements ModInitializer {
 
         ModDataComponents.init();
         ModAttachmentTypes.init();
+        ModLootTableModifiers.modifyLootTables();
 
         ModSounds.init();
 

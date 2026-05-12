@@ -1,7 +1,7 @@
 package net.kblwbl.riftwalker.mixin.server;
 
 import net.kblwbl.riftwalker.registry.ModEffects;
-import net.kblwbl.riftwalker.function.effect.PermanentEffect;
+import net.kblwbl.riftwalker.util.effect.PermanentEffect;
 import net.minecraft.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

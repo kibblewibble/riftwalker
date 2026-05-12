@@ -1,4 +1,4 @@
-package net.kblwbl.riftwalker.function.death;
+package net.kblwbl.riftwalker.util.death;
 
 import net.kblwbl.riftwalker.registry.ModAttachmentTypes;
 import net.kblwbl.riftwalker.registry.ModDamageTypes;
@@ -12,12 +12,4 @@ public class AfterDeath {
               entity.setAttached(ModAttachmentTypes.ROTTED, true);
         }
     }
-
-//    @Inject(method="onDeath", at = @At("HEAD"))
-//    public void sicknessToRot(DamageSource damageSource, CallbackInfo ci){
-//        if(damageSource.isOf(ModDamageTypes.RIFT_DAMAGE)){
-//            assert damageSource.getSource() != null;
-//            damageSource.getSource().setAttached(ModAttachmentTypes.ROTTED, true);
-//        }
-//    }
 }

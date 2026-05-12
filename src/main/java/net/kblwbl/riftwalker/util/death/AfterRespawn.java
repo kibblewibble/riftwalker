@@ -1,4 +1,4 @@
-package net.kblwbl.riftwalker.function.death;
+package net.kblwbl.riftwalker.util.death;
 
 import net.kblwbl.riftwalker.registry.ModAttachmentTypes;
 import net.kblwbl.riftwalker.registry.ModEffects;
