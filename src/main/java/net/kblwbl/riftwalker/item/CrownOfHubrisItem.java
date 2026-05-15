@@ -14,14 +14,11 @@ public class CrownOfHubrisItem extends ArmorItem {
     }
 
     public static void increaseHubris(PlayerEntity player) {
-        if (!player.hasStatusEffect(ModEffects.HUBRIS)||!player.hasStatusEffect(ModEffects.RIFT_SICKNESS)) {
+        if (!player.hasStatusEffect(ModEffects.HUBRIS)) {
             player.addStatusEffect(new StatusEffectInstance(ModEffects.HUBRIS, 20 * 60, 0, false, true));
-            player.addStatusEffect(new StatusEffectInstance(ModEffects.RIFT_SICKNESS, 20 * 60, 0, false, true));
         } else {
-            // Add 60 seconds and 1 level to Hubris and Rift Sickness
+            // Add 60 seconds and 1 level to Hubris
             ModifyEffectStatus.effectModify(player, ModEffects.HUBRIS, 1, 20 * 30, false, false);
-            // Effectively makes Hubris' level the minimum level of Rift Sickness'
-            ModifyEffectStatus.effectModify(player, ModEffects.RIFT_SICKNESS, player.getStatusEffect(ModEffects.HUBRIS).getAmplifier(), 20 * 30, false, false);
         }
     }
 }

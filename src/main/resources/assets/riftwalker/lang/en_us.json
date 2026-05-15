@@ -10,5 +10,6 @@
   "effect.riftwalker.rift_rot": "Rift Rot",
   "effect.riftwalker.hubris": "Hubris",
 
-  "death.attack.rift_damage": "%1$s succumbed to the rot..."
+  "death.attack.rift_damage": "%1$s succumbed to the rot...",
+  "death.attack.hubris_damage": "%1$s's hubris caught up to them"
 }

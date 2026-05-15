@@ -3,6 +3,10 @@
     {
       "id": "riftwalker:rift_damage",
       "required": false
+    },
+    {
+      "id": "riftwalker:hubris_damage",
+      "required": false
     }
   ]
 }

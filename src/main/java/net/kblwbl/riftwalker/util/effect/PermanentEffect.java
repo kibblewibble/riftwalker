@@ -5,10 +5,11 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.registry.entry.RegistryEntry;
 
+import java.util.HashSet;
 import java.util.Iterator;
 
 public class PermanentEffect {
-    static public boolean keepEffect(LivingEntity instance, RegistryEntry<StatusEffect> keepEffect) {
+    static public boolean keepEffect(LivingEntity instance, HashSet<RegistryEntry<StatusEffect>> keepEffect) {
         if (instance.getWorld().isClient) {
             return false;
         } else {
@@ -17,7 +18,7 @@ public class PermanentEffect {
             boolean bl;
             for (bl = false; iterator.hasNext(); bl = true) {
                 StatusEffectInstance effect = iterator.next();
-                if (effect.getEffectType().equals(keepEffect)) {
+                if (keepEffect.contains(effect.getEffectType())) {
                     continue;
                 }
 
