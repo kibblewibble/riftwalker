@@ -1,6 +1,7 @@
 package net.kblwbl.riftwalker.registry;
 
 import net.kblwbl.riftwalker.RiftWalker;
+import net.kblwbl.riftwalker.effect.HubrisEffect;
 import net.kblwbl.riftwalker.effect.RiftRotEffect;
 import net.kblwbl.riftwalker.effect.RiftSicknessEffect;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -34,10 +35,13 @@ public class ModEffects {
                             EntityAttributeModifier.Operation.ADD_VALUE));
 
     public static final RegistryEntry<StatusEffect> HUBRIS = registerStatusEffect("hubris",
-            new RiftRotEffect(StatusEffectCategory.HARMFUL, 0x1c0933)
+            new HubrisEffect(StatusEffectCategory.HARMFUL, 0x1c0933)
                     .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
-                            Identifier.of(RiftWalker.MOD_ID, "hubris"), 1.5F,
-                            EntityAttributeModifier.Operation.ADD_VALUE));
+                            Identifier.of(RiftWalker.MOD_ID, "hubris"), 1F,
+                            EntityAttributeModifier.Operation.ADD_VALUE)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH,
+                        Identifier.of(RiftWalker.MOD_ID, "hubris"), -2.0F,
+                        EntityAttributeModifier.Operation.ADD_VALUE));
 
 
     //----====(( REGISTERS ))====----\\

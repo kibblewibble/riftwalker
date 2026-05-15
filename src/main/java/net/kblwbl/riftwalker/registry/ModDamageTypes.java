@@ -11,6 +11,7 @@ public class ModDamageTypes {
 
     //----====((DAMAGE TYPES))====----\\
     public static final RegistryKey<DamageType> RIFT_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, RiftWalker.id("rift_damage"));
+    public static final RegistryKey<DamageType> HUBRIS_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, RiftWalker.id("hubris_damage"));
 
     //----====(( REGISTERS ))====----\\
     public static void init(){}

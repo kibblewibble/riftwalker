@@ -17,12 +17,16 @@ public class ModDamageTypeProvider extends FabricTagProvider<DamageType> {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(DamageTypeTags.BYPASSES_ARMOR)
-                .addOptional(ModDamageTypes.RIFT_DAMAGE);
+                .addOptional(ModDamageTypes.RIFT_DAMAGE)
+                .addOptional(ModDamageTypes.HUBRIS_DAMAGE);
         getOrCreateTagBuilder(DamageTypeTags.BYPASSES_ENCHANTMENTS)
-                .addOptional(ModDamageTypes.RIFT_DAMAGE);
+                .addOptional(ModDamageTypes.RIFT_DAMAGE)
+                .addOptional(ModDamageTypes.HUBRIS_DAMAGE);
         getOrCreateTagBuilder(DamageTypeTags.NO_KNOCKBACK)
-                .addOptional(ModDamageTypes.RIFT_DAMAGE);
+                .addOptional(ModDamageTypes.RIFT_DAMAGE)
+                .addOptional(ModDamageTypes.HUBRIS_DAMAGE);
         getOrCreateTagBuilder(DamageTypeTags.BYPASSES_EFFECTS)
-                .addOptional(ModDamageTypes.RIFT_DAMAGE);
+                .addOptional(ModDamageTypes.RIFT_DAMAGE)
+                .addOptional(ModDamageTypes.HUBRIS_DAMAGE);
     }
 }
