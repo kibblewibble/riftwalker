@@ -2,6 +2,7 @@ package net.kblwbl.riftwalker.datagen.provider;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.kblwbl.riftwalker.block.RiftshadeCropBlock;
 import net.kblwbl.riftwalker.registry.ModBlocks;
 import net.kblwbl.riftwalker.registry.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -15,7 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RIFT_ROSE, ModBlocks.POTTED_RIFT_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerCrop(ModBlocks.RIFTSHADE_CROP, RiftshadeCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
     }
 
     @Override
@@ -24,6 +25,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.CROWN_OF_HUBRIS, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.RIFT_PETAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RIFTSHADE_PETAL, Models.GENERATED);
     }
 }

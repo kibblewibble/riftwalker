@@ -14,7 +14,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     }
 
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BlockTags.FLOWERS)
-                .add(ModBlocks.RIFT_ROSE);
+        getOrCreateTagBuilder(BlockTags.MAINTAINS_FARMLAND)
+                .add(ModBlocks.RIFTSHADE_CROP);
     }
 }

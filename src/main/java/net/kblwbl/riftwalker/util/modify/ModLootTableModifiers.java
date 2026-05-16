@@ -13,7 +13,7 @@ public class ModLootTableModifiers {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registry) -> {
             if(SNIFFER_DIGGING_GAMEPLAY.equals(key.getValue())) {
                 tableBuilder.modifyPools(pool -> pool
-                        .with(ItemEntry.builder(ModItems.RIFT_PETAL))
+                        .with(ItemEntry.builder(ModItems.RIFTSHADE_PETAL))
 
                 );
             }

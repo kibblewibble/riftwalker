@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "riftwalker:block/rift_rose"
+    "layer0": "riftwalker:item/riftshade_seeds"
   }
 }

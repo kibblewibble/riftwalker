@@ -34,12 +34,14 @@ public class ModItems {
             ));
 
     public static final Item CROWN_OF_HUBRIS = register("crown_of_hubris",
-            new CrownOfHubrisItem(ModArmorMaterials.RIFT_PETAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new CrownOfHubrisItem(ModArmorMaterials.RIFTSHADE_PETAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(33))
                     .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true))));
 
-    public static final Item RIFT_PETAL = register("rift_petal",
+    public static final Item RIFTSHADE_PETAL = register("riftshade_petal",
             new Item(new Item.Settings()));
+    public static final Item RIFTSHADE_SEEDS = register("riftshade_seeds",
+            new AliasedBlockItem(ModBlocks.RIFTSHADE_CROP, new Item.Settings()));
 
 
     //----====(( REGISTERS ))====----\\

@@ -17,10 +17,10 @@ import java.util.function.Supplier;
 
 public class ModArmorMaterials {
     @SuppressWarnings("all")
-    public static final RegistryEntry<ArmorMaterial> RIFT_PETAL_ARMOR_MATERIAL = registerArmorMaterial("rift_petal",
+    public static final RegistryEntry<ArmorMaterial> RIFTSHADE_PETAL_ARMOR_MATERIAL = registerArmorMaterial("rift_petal",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
                 map.put(ArmorItem.Type.HELMET, 2);
-            }), 0, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(ModItems.RIFT_PETAL),
+            }), 0, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, () -> Ingredient.ofItems(ModItems.RIFTSHADE_PETAL),
                     List.of(new ArmorMaterial.Layer(RiftWalker.id("rift_petal"))), 0, 0));
 
     //----====(( REGISTERS ))====----\\

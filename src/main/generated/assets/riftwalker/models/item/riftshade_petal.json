@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "riftwalker:item/rift_petal"
+    "layer0": "riftwalker:item/riftshade_petal"
   }
 }

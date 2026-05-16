@@ -1,17 +1,15 @@
 package net.kblwbl.riftwalker.registry;
 
 import net.kblwbl.riftwalker.RiftWalker;
-import net.kblwbl.riftwalker.block.ModFlowerBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.kblwbl.riftwalker.block.RiftshadeCropBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static net.minecraft.block.Blocks.createFlowerPotBlock;
 
 public class ModBlocks {
 
@@ -21,11 +19,16 @@ public class ModBlocks {
     //----====((  BLOCKS  ))====----\\
 
     // Flower + Plant Blocks \\
-    public static Block RIFT_ROSE = cutout(register("rift_rose", new ModFlowerBlock(
-            ModEffects.RIFT_SICKNESS, 10, AbstractBlock.Settings.copy(Blocks.CORNFLOWER))));
-
-    // Flower Pot \\
-    public static final Block POTTED_RIFT_ROSE = cutout(registerWithoutItem("potted_rift_rose", createFlowerPotBlock(RIFT_ROSE)));
+    public static final Block RIFTSHADE_CROP = cutout(registerWithoutItem(
+            "riftshade_crop",
+            new RiftshadeCropBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY))
+    ));
 
 
     //----====(( REGISTERS ))====----\\
